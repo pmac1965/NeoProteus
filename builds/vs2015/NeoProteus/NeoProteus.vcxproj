@@ -26,6 +26,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\source\core\prVersion.cpp" />
+    <ClCompile Include="..\..\..\source\debug\prAlert.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\actor\prActor.h" />
@@ -42,6 +43,10 @@
     <ClInclude Include="..\..\..\source\core\prVersion.h" />
     <ClInclude Include="..\..\..\source\core\prVertex.h" />
     <ClInclude Include="..\..\..\source\core\prWaypoint.h" />
+    <ClInclude Include="..\..\..\source\debug\prAlert.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\..\..\source\prConfig.h" />
     <ClInclude Include="..\..\..\source\proteus.h" />
   </ItemGroup>

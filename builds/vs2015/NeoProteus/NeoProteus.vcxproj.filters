@@ -36,6 +36,9 @@
     <ClCompile Include="..\..\..\source\core\prVersion.cpp">
       <Filter>source\core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prAlert.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\actor\prActor.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\core\prWaypoint.h">
       <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prAlert.h">
+      <Filter>source\debug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
