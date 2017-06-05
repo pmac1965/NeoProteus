@@ -45,6 +45,9 @@
     <ClCompile Include="..\..\..\source\debug\prAssert.cpp">
       <Filter>source\debug</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prDebug.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\actor\prActor.h">
@@ -93,6 +96,9 @@
       <Filter>source\debug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\debug\prAssert.h">
+      <Filter>source\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prDebug.h">
       <Filter>source\debug</Filter>
     </ClInclude>
   </ItemGroup>
