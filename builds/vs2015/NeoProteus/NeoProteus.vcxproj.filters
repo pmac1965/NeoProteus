@@ -39,7 +39,7 @@
     <ClCompile Include="..\..\..\source\debug\prAlert.cpp">
       <Filter>source\debug</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\debug\prTracing.cpp">
+    <ClCompile Include="..\..\..\source\debug\prTrace.cpp">
       <Filter>source\debug</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,7 +86,7 @@
     <ClInclude Include="..\..\..\source\debug\prAlert.h">
       <Filter>source\debug</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\source\debug\prTracing.h">
+    <ClInclude Include="..\..\..\source\debug\prTrace.h">
       <Filter>source\debug</Filter>
     </ClInclude>
   </ItemGroup>
