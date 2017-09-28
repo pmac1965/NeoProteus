@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -25,15 +21,28 @@
     <Filter Include="include\proteus\core">
       <UniqueIdentifier>{b320f53c-0fc1-4931-9261-290f1f3917ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\proteus\debug">
+      <UniqueIdentifier>{23a6a43e-fb2e-4dba-a11e-380b64dcf913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\proteus\actor">
+      <UniqueIdentifier>{b8268c3c-8d2d-4658-94ca-cdb7ee256f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\proteus\debug">
+      <UniqueIdentifier>{a7574f71-a9be-4312-b5fc-f242f09b983c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\proteus\actor">
+      <UniqueIdentifier>{4f385c76-cc10-4826-9085-35b4ec36781c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{409d84e0-763b-4162-86cd-8889ec10a42e}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\proteus\core\prGameApplication.h">
-      <Filter>include\proteus\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\include\proteus\core\prText.h">
       <Filter>include\proteus\core</Filter>
     </ClInclude>
   </ItemGroup>

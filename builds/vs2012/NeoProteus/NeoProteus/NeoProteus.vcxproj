@@ -83,7 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\proteus\core\prGameApplication.h" />
-    <ClInclude Include="..\..\..\..\include\proteus\core\prText.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src\proteus\core\prGameApplication.cpp" />
