@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\actor">
+      <UniqueIdentifier>{3f9df25e-dd16-4fce-a1e2-112c0864a8fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{1052937c-064c-472d-a2ba-b1dd2709b59b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\debug">
+      <UniqueIdentifier>{392f2f34-bc23-4375-be9e-6b2181aee9ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\actor\prActor.cpp">
+      <Filter>source\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\actor\prActorManager.cpp">
+      <Filter>source\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\core\prSettings.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\core\prVersion.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prAlert.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prTrace.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prAssert.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\debug\prDebug.cpp">
+      <Filter>source\debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\actor\prActor.h">
+      <Filter>source\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\actor\prActorManager.h">
+      <Filter>source\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\actor\prActorStateMachine.h">
+      <Filter>source\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prTypes.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\prConfig.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\proteus.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prGameObject.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prDefines.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prMacros.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prSettings.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prVersion.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prVertex.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prWaypoint.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prAlert.h">
+      <Filter>source\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prTrace.h">
+      <Filter>source\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prAssert.h">
+      <Filter>source\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\debug\prDebug.h">
+      <Filter>source\debug</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
