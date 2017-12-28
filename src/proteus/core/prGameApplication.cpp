@@ -17,6 +17,11 @@
  */
 
 
+#include "core/prTypes.h"
+
+
+#if 0
+
 #include <proteus/core/prGameApplication.h>
 
 
@@ -253,3 +258,4 @@ bool prGameApplication::mouseReleased(const OIS::MouseEvent& me, OIS::MouseButto
 //{
 //    // Create your scene here :)
 //}
+#endif

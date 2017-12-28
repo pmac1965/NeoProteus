@@ -45,6 +45,15 @@
     <ClInclude Include="..\..\..\..\include\proteus\core\prGameApplication.h">
       <Filter>include\proteus\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\source\core\prTypes.h">
+      <Filter>include\proteus\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\proteus\core\prTypes.h">
+      <Filter>include\proteus\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\proteus\core\prConfig.h">
+      <Filter>include\proteus\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src\proteus\core\prGameApplication.cpp">
