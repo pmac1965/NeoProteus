@@ -18,26 +18,26 @@
 #pragma once
 
 
-#include "../prConfig.h"
+#include "proteus/core/prConfig.h"
 //#include "../debug/prAssert.h"
 
 
-// Namespaces for C++ code
-#if defined(__cplusplus)
-  #define PRNAMESPACE_BEG(name) namespace name {
-  #define PRNAMESPACE_END       }
-
-// No namespaces for C code
-#else
-  #define PRNAMESPACE_BEG(name)
-  #define PRNAMESPACE_END
-
-#endif
-
-
-// Namespaces
-PRNAMESPACE_BEG(Proteus)
-PRNAMESPACE_BEG(Core)
+//// Namespaces for C++ code
+//#if defined(__cplusplus)
+//  #define PRNAMESPACE_BEG(name) namespace name {
+//  #define PRNAMESPACE_END       }
+//
+//// No namespaces for C code
+//#else
+//  #define PRNAMESPACE_BEG(name)
+//  #define PRNAMESPACE_END
+//
+//#endif
+//
+//
+//// Namespaces
+//PRNAMESPACE_BEG(Proteus)
+//PRNAMESPACE_BEG(Core)
 
 
 // Basic types - PC
@@ -138,5 +138,5 @@ typedef struct QuadData
 //PRCOMPILER_ASSERT(sizeof(f64) == 8);
 
 
-PRNAMESPACE_END
-PRNAMESPACE_END // Namespaces
+//PRNAMESPACE_END
+//PRNAMESPACE_END // Namespaces

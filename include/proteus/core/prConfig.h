@@ -76,102 +76,102 @@
 #endif
 
 
-// ----------------------------------------------------------------------------
-// Use these defines to configure the engine setup
-// ----------------------------------------------------------------------------
-#ifndef SOUND_ALLOW                                     // Use the sound system. Can be removed for debugging.
-#define SOUND_ALLOW
-#endif
+//// ----------------------------------------------------------------------------
+//// Use these defines to configure the engine setup
+//// ----------------------------------------------------------------------------
+//#ifndef SOUND_ALLOW                                     // Use the sound system. Can be removed for debugging.
+//#define SOUND_ALLOW
+//#endif
+//
+//#ifndef ALLOW_DIRECTX                                   // For builds that don't need DirectX
+////#define ALLOW_DIRECTX
+//#endif
+//
+//#ifndef ALLOW_FREETYPE                                  // For builds that need freetype
+//#define ALLOW_FREETYPE
+//#endif
+//
+//#ifndef REMOVE_EXCEPTIONS                               // Allows try/catch code to be removed.
+//#define REMOVE_EXCEPTIONS
+//#endif
+//
+//#ifndef ALLOW_STEAM                                     // Allows the steam code
+//#define ALLOW_STEAM
+//#endif
+//
+//#ifndef ALLOW_GLEW                                      // Allows glew to be used
+//#define ALLOW_GLEW
+//#endif
+//
+//#ifndef HIDE_MESSAGES                                   // Allows the TODO messages to be displayed by the compiler.
+////#define HIDE_MESSAGES
+//#endif
+//
+//#ifndef PROTEUS_ALLOW_CONSOLE                           // Allows the debug console to be optionally removed. (PC only)
+//#define PROTEUS_ALLOW_CONSOLE
+//#endif
 
-#ifndef ALLOW_DIRECTX                                   // For builds that don't need DirectX
-//#define ALLOW_DIRECTX
-#endif
-
-#ifndef ALLOW_FREETYPE                                  // For builds that need freetype
-#define ALLOW_FREETYPE
-#endif
-
-#ifndef REMOVE_EXCEPTIONS                               // Allows try/catch code to be removed.
-#define REMOVE_EXCEPTIONS
-#endif
-
-#ifndef ALLOW_STEAM                                     // Allows the steam code
-#define ALLOW_STEAM
-#endif
-
-#ifndef ALLOW_GLEW                                      // Allows glew to be used
-#define ALLOW_GLEW
-#endif
-
-#ifndef HIDE_MESSAGES                                   // Allows the TODO messages to be displayed by the compiler.
-//#define HIDE_MESSAGES
-#endif
-
-#ifndef PROTEUS_ALLOW_CONSOLE                           // Allows the debug console to be optionally removed. (PC only)
-#define PROTEUS_ALLOW_CONSOLE
-#endif
-
-// Tools will always have min/max buttons and be resizeble
-#if defined(PROTEUS_TOOL)
-    #ifndef PROTEUS_ALLOW_WINDOW_MINIMIZE               // Allows the tool window to have a minimize button
-    #define PROTEUS_ALLOW_WINDOW_MINIMIZE
-    #endif
-
-    #ifndef PROTEUS_ALLOW_WINDOW_MAXIMIZE               // Allows the tool window to have a maximize button
-    #define PROTEUS_ALLOW_WINDOW_MAXIMIZE
-    #endif
-
-    #ifndef PROTEUS_ALLOW_RESIZEABLE_WINDOW             // Allows the tool window to be resizeable.
-    #define PROTEUS_ALLOW_RESIZEABLE_WINDOW
-    #endif
-
-// Games generally won't
-#else
-    #ifndef PROTEUS_ALLOW_WINDOW_MINIMIZE               // Allows the game window to have a minimize button (Optionally)
-    //#define PROTEUS_ALLOW_WINDOW_MINIMIZE
-    #endif
-
-    #ifndef PROTEUS_ALLOW_WINDOW_MAXIMIZE               // Allows the game window to have a maximize button (Optionally)
-    //#define PROTEUS_ALLOW_WINDOW_MAXIMIZE
-    #endif
-
-    #ifndef PROTEUS_ALLOW_RESIZEABLE_WINDOW             // Allows the game window to be resizeable. (Optionally)
-    //#define PROTEUS_ALLOW_RESIZEABLE_WINDOW
-    #endif
-
-#endif
-
-#ifndef PROTEUS_ALLOW_AT                                // Allows the AT define to exist
-//#define PROTEUS_ALLOW_AT
-#endif
-
-#ifndef PROTEUS_IAP_TEST                                // Allows the in app purchase test code
-//#define PROTEUS_IAP_TEST
-#endif
-
-
-// ----------------------------------------------------------------------------
-// Android config
-// ----------------------------------------------------------------------------
-#if defined(PLATFORM_ANDROID)
-#ifndef USE_OPENAL                                      // Allows android to use OpenAL
-#define USE_OPENAL
-#endif
-#endif
+//// Tools will always have min/max buttons and be resizeble
+//#if defined(PROTEUS_TOOL)
+//    #ifndef PROTEUS_ALLOW_WINDOW_MINIMIZE               // Allows the tool window to have a minimize button
+//    #define PROTEUS_ALLOW_WINDOW_MINIMIZE
+//    #endif
+//
+//    #ifndef PROTEUS_ALLOW_WINDOW_MAXIMIZE               // Allows the tool window to have a maximize button
+//    #define PROTEUS_ALLOW_WINDOW_MAXIMIZE
+//    #endif
+//
+//    #ifndef PROTEUS_ALLOW_RESIZEABLE_WINDOW             // Allows the tool window to be resizeable.
+//    #define PROTEUS_ALLOW_RESIZEABLE_WINDOW
+//    #endif
+//
+//// Games generally won't
+//#else
+//    #ifndef PROTEUS_ALLOW_WINDOW_MINIMIZE               // Allows the game window to have a minimize button (Optionally)
+//    //#define PROTEUS_ALLOW_WINDOW_MINIMIZE
+//    #endif
+//
+//    #ifndef PROTEUS_ALLOW_WINDOW_MAXIMIZE               // Allows the game window to have a maximize button (Optionally)
+//    //#define PROTEUS_ALLOW_WINDOW_MAXIMIZE
+//    #endif
+//
+//    #ifndef PROTEUS_ALLOW_RESIZEABLE_WINDOW             // Allows the game window to be resizeable. (Optionally)
+//    //#define PROTEUS_ALLOW_RESIZEABLE_WINDOW
+//    #endif
+//
+//#endif
+//
+//#ifndef PROTEUS_ALLOW_AT                                // Allows the AT define to exist
+////#define PROTEUS_ALLOW_AT
+//#endif
+//
+//#ifndef PROTEUS_IAP_TEST                                // Allows the in app purchase test code
+////#define PROTEUS_IAP_TEST
+//#endif
 
 
-// Tweakbar
-#if defined(PLATFORM_PC)
-  #ifndef PROTEUS_USE_ANT_TWEAK_BAR                     // Use AntTweakBar?
-  #define PROTEUS_USE_ANT_TWEAK_BAR
-  #endif
-#endif
-
-
-// Watermark?
-#ifndef PROTEUS_ALLOW_WATERMARK                         // Allow watermark
-#define PROTEUS_ALLOW_WATERMARK
-#endif
+//// ----------------------------------------------------------------------------
+//// Android config
+//// ----------------------------------------------------------------------------
+//#if defined(PLATFORM_ANDROID)
+//#ifndef USE_OPENAL                                      // Allows android to use OpenAL
+//#define USE_OPENAL
+//#endif
+//#endif
+//
+//
+//// Tweakbar
+//#if defined(PLATFORM_PC)
+//  #ifndef PROTEUS_USE_ANT_TWEAK_BAR                     // Use AntTweakBar?
+//  #define PROTEUS_USE_ANT_TWEAK_BAR
+//  #endif
+//#endif
+//
+//
+//// Watermark?
+//#ifndef PROTEUS_ALLOW_WATERMARK                         // Allow watermark
+//#define PROTEUS_ALLOW_WATERMARK
+//#endif
 
 
 // OpenGL debug settings
@@ -180,6 +180,6 @@
 
 
 // Optimizations
-#define PROTEUS_OPTIMISE_REMOVE_ISTEXTURE               // If defined this removes the IsTexture text in texture release
+//#define PROTEUS_OPTIMISE_REMOVE_ISTEXTURE               // If defined this removes the IsTexture text in texture release
 //#define PROTEUS_OPTIMISE_NO_VECTOR2_INIT                // If defined then the prVector2 class does not zero its members in the constructor
 //#define PROTEUS_OPTIMISE_NO_VECTOR3_INIT                // If defined then the prVector3 class does not zero its members in the constructor

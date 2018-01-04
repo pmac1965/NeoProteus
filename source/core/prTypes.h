@@ -1,3 +1,4 @@
+#if 0
 /**
  * Copyright 2017 Paul Michael McNab
  * 
@@ -22,22 +23,22 @@
 //#include "../debug/prAssert.h"
 
 
-// Namespaces for C++ code
-#if defined(__cplusplus)
-  #define PRNAMESPACE_BEG(name) namespace name {
-  #define PRNAMESPACE_END       }
-
-// No namespaces for C code
-#else
-  #define PRNAMESPACE_BEG(name)
-  #define PRNAMESPACE_END
-
-#endif
-
-
-// Namespaces
-PRNAMESPACE_BEG(Proteus)
-PRNAMESPACE_BEG(Core)
+//// Namespaces for C++ code
+//#if defined(__cplusplus)
+//  #define PRNAMESPACE_BEG(name) namespace name {
+//  #define PRNAMESPACE_END       }
+//
+//// No namespaces for C code
+//#else
+//  #define PRNAMESPACE_BEG(name)
+//  #define PRNAMESPACE_END
+//
+//#endif
+//
+//
+//// Namespaces
+//PRNAMESPACE_BEG(Proteus)
+//PRNAMESPACE_BEG(Core)
 
 
 // Basic types - PC
@@ -140,3 +141,4 @@ typedef struct QuadData
 
 PRNAMESPACE_END
 PRNAMESPACE_END // Namespaces
+#endif
