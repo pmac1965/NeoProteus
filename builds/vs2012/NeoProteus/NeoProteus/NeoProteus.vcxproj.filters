@@ -37,6 +37,9 @@
       <UniqueIdentifier>{409d84e0-763b-4162-86cd-8889ec10a42e}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="include\proteus\Math">
+      <UniqueIdentifier>{ed461a26-4251-4a32-81bc-699c8feb842d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -53,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\include\proteus.h">
       <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\proteus\maths\prVector2.h">
+      <Filter>include\proteus\Math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -59,9 +59,6 @@
     <ClInclude Include="..\..\..\source\actor\prActorStateMachine.h">
       <Filter>source\actor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\source\core\prTypes.h">
-      <Filter>source\core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\source\prConfig.h">
       <Filter>source</Filter>
     </ClInclude>
@@ -100,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\debug\prDebug.h">
       <Filter>source\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\core\prTypes.h">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
