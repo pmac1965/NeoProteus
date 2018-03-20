@@ -42,6 +42,9 @@
     <ClInclude Include="..\..\..\include\proteus\core\prGameApplication.h" />
     <ClInclude Include="..\..\..\include\proteus\core\prText.h" />
     <ClInclude Include="..\..\..\include\proteus\core\prTypes.h" />
+    <ClInclude Include="..\..\..\include\proteus\debug\prAlert.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\..\..\source\actor\prActor.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
