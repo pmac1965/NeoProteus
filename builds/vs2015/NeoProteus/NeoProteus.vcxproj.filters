@@ -48,15 +48,6 @@
     <ClCompile Include="..\..\..\source\debug\prAlert.cpp">
       <Filter>source\debug</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\debug\prTrace.cpp">
-      <Filter>source\debug</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\debug\prAssert.cpp">
-      <Filter>source\debug</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\debug\prDebug.cpp">
-      <Filter>source\debug</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\actor\prActor.h">
@@ -94,18 +85,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\core\prWaypoint.h">
       <Filter>source\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\debug\prAlert.h">
-      <Filter>source\debug</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\debug\prTrace.h">
-      <Filter>source\debug</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\debug\prAssert.h">
-      <Filter>source\debug</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\debug\prDebug.h">
-      <Filter>source\debug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\core\prTypes.h">
       <Filter>source\core</Filter>

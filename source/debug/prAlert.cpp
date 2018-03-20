@@ -1,3 +1,4 @@
+#if 0
 /**
  * prAlert.cpp
  *
@@ -148,3 +149,5 @@ void prAlertShowWarning(const char *title, const char *message, prWindow *pWindo
 
 #endif
 }
+
+#endif
