@@ -18,17 +18,17 @@
 
 
 #include "prSettings.h"
-#include "prStringUtil.h"
-#include "../debug/prTrace.h"
-#include "../debug/prDebug.h"
-#include "../file/prFileSystem.h"
+//#include "prStringUtil.h"
+//#include "../debug/prTrace.h"
+//#include "../debug/prDebug.h"
+//#include "../file/prFileSystem.h"
 
 
-#if defined(PLATFORM_PC)
-#include <windows.h>
-#include <shlobj.h>
-#include <stdio.h>
-#endif
+//#if defined(PLATFORM_PC)
+//#include <windows.h>
+//#include <shlobj.h>
+//#include <stdio.h>
+//#endif
 
 
 /// ---------------------------------------------------------------------------
@@ -38,11 +38,11 @@ prSettings::prSettings(const char *folder, const char *filename, prSettingsCallb
                                                                                                   , mFilename               (filename)
                                                                                                   , mprSettingsCallbacks    (pCallbacks)
 {
-    PRASSERT(folder && *folder);
-    PRASSERT(filename && *filename);
+//    PRASSERT(folder && *folder);
+//    PRASSERT(filename && *filename);
     mCorrectFileType = false;
 
-    TODO("Make work across all platforms")
+//    TODO("Make work across all platforms")
 }
 
 
@@ -59,12 +59,12 @@ prSettings::~prSettings()
 /// ---------------------------------------------------------------------------
 void prSettings::Add(const char *key, const char *value)
 {
-    PRASSERT(key && *key);
-    PRASSERT(value && *value);
+//    PRASSERT(key && *key);
+//    PRASSERT(value && *value);
 
-    if (Exists(key))
+/*    if (Exists(key))
     {
-        prTrace(LogError, "Can't add value %s twice\n", key);
+//        prTrace(LogError, "Can't add value %s twice\n", key);
     }
     else
     {
@@ -73,7 +73,7 @@ void prSettings::Add(const char *key, const char *value)
         (
             std::pair<std::string, std::string>(key, value)
         );
-    }
+    }//*/
 }
 
 
@@ -82,6 +82,7 @@ void prSettings::Add(const char *key, const char *value)
 /// ---------------------------------------------------------------------------
 void prSettings::Save()
 {
+    /*
 #if defined(PLATFORM_PC)
 
     char filename[MAX_PATH] = { '\0' };
@@ -129,6 +130,7 @@ void prSettings::Save()
     doc.SaveFile(filename);
 
 #endif
+//*/
 }
 
 
@@ -138,7 +140,7 @@ void prSettings::Save()
 bool prSettings::Load()
 {
     bool result = false;
-
+/*
 #if defined(PLATFORM_PC)
 
     char filename[MAX_PATH] = { '\0' };    
@@ -164,6 +166,7 @@ bool prSettings::Load()
     }
 
 #endif
+//*/
 
     return (result && mCorrectFileType);
 }
@@ -176,7 +179,7 @@ const char *prSettings::GetValueForKey(const char *key)
 {
     const char *value = NULL;
     
-    if (key && *key)
+    /*if (key && *key)
     {
         if (Exists(key))
         {
@@ -191,7 +194,7 @@ const char *prSettings::GetValueForKey(const char *key)
                 }
             }
         }
-    }
+    }//*/
 
     return value;
 }
@@ -202,7 +205,7 @@ const char *prSettings::GetValueForKey(const char *key)
 /// ---------------------------------------------------------------------------
 void prSettings::SetValueForKey(const char *key, const char *value)
 {
-    if (key && *key)
+ /*   if (key && *key)
     {
         if (Exists(key))
         {
@@ -222,14 +225,14 @@ void prSettings::SetValueForKey(const char *key, const char *value)
                 }
             }
         }
-    }
+    }//*/
 }
 
 
 /// ---------------------------------------------------------------------------
 /// Generate the filename
 /// ---------------------------------------------------------------------------
-#if defined(PLATFORM_PC)
+#if defined(SPLATFORM_PC)
 void prSettings::GenerateFileName(char *pBuffer)
 {
     if (pBuffer)
@@ -254,7 +257,7 @@ void prSettings::GenerateFileName(char *pBuffer)
 /// ---------------------------------------------------------------------------
 /// Generate the folder name
 /// ---------------------------------------------------------------------------
-#if defined(PLATFORM_PC)
+#if defined(SPLATFORM_PC)
 void prSettings::GenerateFolderName(char *pBuffer)
 {
     if (pBuffer)
