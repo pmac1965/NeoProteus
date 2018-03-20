@@ -22,6 +22,15 @@
     <Filter Include="source\debug">
       <UniqueIdentifier>{392f2f34-bc23-4375-be9e-6b2181aee9ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\core">
+      <UniqueIdentifier>{64ec5686-ac7d-4c4e-a783-da6be65ef197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\debug">
+      <UniqueIdentifier>{c60f0774-4d74-4977-92b1-e4a7af782fed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\maths">
+      <UniqueIdentifier>{44039e77-09df-4bb7-ad01-7c2422bf11c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\actor\prActor.cpp">
@@ -99,7 +108,19 @@
       <Filter>source\debug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\core\prTypes.h">
-      <Filter>include</Filter>
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\core\prConfig.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\core\prGameApplication.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\core\prText.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\core\prTypes.h">
+      <Filter>include\core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
