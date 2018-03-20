@@ -21,7 +21,7 @@
 
 
 // The config file
-#include "prConfig.h"
+//#include "prConfig.h"
 
 
 // External code
@@ -83,7 +83,7 @@
 //#include "core/prString.h"
 //#include "core/prStringShared.h"
 //#include "core/prStringUtil.h"
-//#include "core/prTypes.h"
+#include "core/prTypes.h"
 //#include "core/prVersion.h"
 //#include "core/prVertex.h"
 //#include "core/prWaypoint.h"
@@ -232,6 +232,7 @@
 
 
 // Include the PC libraries
+/*
 #if defined(PLATFORM_PC)
     // OpenGL libs
     #pragma comment(lib, "opengl32.lib")
@@ -293,6 +294,6 @@
     #endif
 
 #endif//PLATFORM_PC
-
+//*/
 
 #endif//__PROTEUS_H

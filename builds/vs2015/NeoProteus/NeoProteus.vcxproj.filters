@@ -104,5 +104,8 @@
     <ClInclude Include="..\..\..\include\proteus\debug\prAlert.h">
       <Filter>include\debug</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\debug\prDebug.h">
+      <Filter>include\debug</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

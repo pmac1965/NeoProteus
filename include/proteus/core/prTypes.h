@@ -1,3 +1,21 @@
+#pragma once
+
+#include "proteus/core/prConfig.h"
+
+
+    typedef   signed char           s8;
+    typedef unsigned char           u8;
+    typedef   signed short          s16;
+    typedef unsigned short          u16;
+    typedef   signed int            s32;
+    typedef unsigned int            u32;
+    typedef   signed __int64        s64;
+    typedef unsigned __int64        u64;
+    typedef float                   f32;
+    typedef double                  f64;
+
+#if 0
+
 /**
  * Copyright 2017 Paul Michael McNab
  * 
@@ -140,3 +158,5 @@ typedef struct QuadData
 
 //PRNAMESPACE_END
 //PRNAMESPACE_END // Namespaces
+
+#endif
