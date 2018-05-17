@@ -1,7 +1,7 @@
 /**
  * prVersion.cpp
  *
- *  Copyright 2014 Paul Michael McNab
+ *  Copyright 2018 Paul Michael McNab
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -17,42 +17,41 @@
  */
 
 
-//#include "../prConfig.h"
-
-
 #include <stdio.h>
-#include "prVersion.h"
+#include "core/prVersion.h"
 
 
-namespace
-{
-    int versionMajor    = 3;
+namespace Proteus {
+namespace Core {
+
+    int versionMajor    = 1;
     int versionMinor    = 0;
     int versionRevision = 0;
-}
 
 
-/// ---------------------------------------------------------------------------
-/// Acquire engine version number.
-/// ---------------------------------------------------------------------------
-void prGetVersion(int &major, int &minor, int &revision)
-{
-    major    = versionMajor;
-    minor    = versionMinor;
-    revision = versionRevision;
-}
+    // ---------------------------------------------------------------------------
+    // Acquire engine version number.
+    // ---------------------------------------------------------------------------
+    void prGetVersion(int &major, int &minor, int &revision)
+    {
+        major    = versionMajor;
+        minor    = versionMinor;
+        revision = versionRevision;
+    }
 
 
-/// ---------------------------------------------------------------------------
-/// Acquire engine version number as a string.
-/// ---------------------------------------------------------------------------
-const char *prGetVersionAsString()
-{
-    static char buffer[256];
+    // ---------------------------------------------------------------------------
+    // Acquire engine version number as a string.
+    // ---------------------------------------------------------------------------
+    const char *prGetVersionAsString()
+    {
+//        static char buffer[256];
 
-    sprintf_s(buffer, sizeof(buffer), "%i.%i.%i", versionMajor, versionMinor, versionRevision);
-    //sprintf(buffer, "%i.%i.%i", versionMajor, versionMinor, versionRevision);
+  //      sprintf_s(buffer, sizeof(buffer), "%i.%i.%i", versionMajor, versionMinor, versionRevision);
+        //sprintf(buffer, "%i.%i.%i", versionMajor, versionMinor, versionRevision);
 
-    return buffer;
-}
+        return 0;// buffer;
+    }
+
+}}
 

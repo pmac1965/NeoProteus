@@ -1,6 +1,6 @@
 // File: prVersion.h
 /**
- * Copyright 2014 Paul Michael McNab
+ * Copyright 2018 Paul Michael McNab
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,11 @@
 #pragma once
 
 
+// Namespaces
+namespace Proteus {
+namespace Core {
+
+
 // Function: prGetVersion
 //      Acquire engine version number.
 //
@@ -33,4 +38,7 @@ void prGetVersion(int &major, int &minor, int &revision);
 //
 // Returns:
 //      A string in the format of "major.minor.revision"
-const char *prGetVersionAsString();
+//const char *prGetVersionAsString();
+
+
+}}

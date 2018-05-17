@@ -77,9 +77,6 @@
     <ClInclude Include="..\..\..\source\core\prSettings.h">
       <Filter>source\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\source\core\prVersion.h">
-      <Filter>source\core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\source\core\prVertex.h">
       <Filter>source\core</Filter>
     </ClInclude>
@@ -106,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\proteus\debug\prDebug.h">
       <Filter>include\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\proteus\core\prVersion.h">
+      <Filter>include\core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
