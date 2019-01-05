@@ -1,2 +1,3 @@
 # NeoProteus
-A game engine
+A game engine (On hold, while I work on the original)
+
