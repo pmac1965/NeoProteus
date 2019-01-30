@@ -1,5 +1,5 @@
 /**
- *  Copyright 2014 Paul Michael McNab
+ *  Copyright 2018 Paul Michael McNab
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@
 #pragma once
 
 
-//// Audio platform
-//#define AUDIO_PC        1
+// Audio platform
+#define AUDIO_PC        1
 //#define AUDIO_IOS       2
 //#define AUDIO_ANDROID   3
 //#define AUDIO_MAC       4
@@ -29,7 +29,10 @@
 // Determine platform. First check for PC
 #if defined(_MSC_VER)
     #define PLATFORM_PC
-//    #define AUDIO_TYPE  AUDIO_PC
+    #define AUDIO_TYPE  AUDIO_PC
+
+#else
+    #error No platform has been defined!
 
 #endif
 
@@ -72,10 +75,6 @@
 //        #define AUDIO_TYPE  AUDIO_ANDROID
 //    #endif
 //
-//#else
-//    #error No platform has been defined!
-//
-//#endif
 
 
 //// ----------------------------------------------------------------------------

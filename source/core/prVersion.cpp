@@ -18,15 +18,16 @@
 
 
 #include <stdio.h>
+#include "core/prConfig.h"
 #include "core/prVersion.h"
 
 
 namespace Proteus {
 namespace Core {
 
-    int versionMajor    = 1;
-    int versionMinor    = 0;
-    int versionRevision = 0;
+    int versionMajor    = PR_VERSION_MAJOR;
+    int versionMinor    = PR_VERSION_MINOR;
+    int versionRevision = PR_VERSION_VERSION;
 
 
     // ---------------------------------------------------------------------------
@@ -45,12 +46,15 @@ namespace Core {
     // ---------------------------------------------------------------------------
     const char *prGetVersionAsString()
     {
-//        static char buffer[256];
+        static char buffer[64];
 
-  //      sprintf_s(buffer, sizeof(buffer), "%i.%i.%i", versionMajor, versionMinor, versionRevision);
-        //sprintf(buffer, "%i.%i.%i", versionMajor, versionMinor, versionRevision);
+#if defined(PLATFORM_PC)
+        sprintf_s(buffer, sizeof(buffer), "%i.%i.%i", versionMajor, versionMinor, versionRevision);
+#else
+        sprintf(buffer, "%i.%i.%i", versionMajor, versionMinor, versionRevision);
+#endif
 
-        return 0;// buffer;
+        return buffer;
     }
 
 }}

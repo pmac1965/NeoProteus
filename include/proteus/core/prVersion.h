@@ -19,6 +19,12 @@
 #pragma once
 
 
+// 
+#define PR_VERSION_MAJOR    1
+#define PR_VERSION_MINOR    0
+#define PR_VERSION_VERSION  0
+
+
 // Namespaces
 namespace Proteus {
 namespace Core {
@@ -38,7 +44,7 @@ void prGetVersion(int &major, int &minor, int &revision);
 //
 // Returns:
 //      A string in the format of "major.minor.revision"
-//const char *prGetVersionAsString();
+const char *prGetVersionAsString();
 
 
 }}

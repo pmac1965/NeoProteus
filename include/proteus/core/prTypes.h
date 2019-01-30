@@ -1,23 +1,5 @@
-#pragma once
-
-#include "proteus/core/prConfig.h"
-
-
-    typedef   signed char           s8;
-    typedef unsigned char           u8;
-    typedef   signed short          s16;
-    typedef unsigned short          u16;
-    typedef   signed int            s32;
-    typedef unsigned int            u32;
-    typedef   signed __int64        s64;
-    typedef unsigned __int64        u64;
-    typedef float                   f32;
-    typedef double                  f64;
-
-#if 0
-
 /**
- * Copyright 2017 Paul Michael McNab
+ * Copyright 2018 Paul Michael McNab
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,30 +18,18 @@
 #pragma once
 
 
-#include "proteus/core/prConfig.h"
-//#include "../debug/prAssert.h"
+#include "prConfig.h"
 
-
-//// Namespaces for C++ code
-//#if defined(__cplusplus)
-//  #define PRNAMESPACE_BEG(name) namespace name {
-//  #define PRNAMESPACE_END       }
-//
-//// No namespaces for C code
-//#else
-//  #define PRNAMESPACE_BEG(name)
-//  #define PRNAMESPACE_END
-//
-//#endif
-//
-//
-//// Namespaces
-//PRNAMESPACE_BEG(Proteus)
-//PRNAMESPACE_BEG(Core)
+ 
+// Used to check values at compile time.
+#ifndef PRCOMPILER_ASSERT
+#define PRCOMPILER_ASSERT(check) typedef int COMPILER_ASSERT__[(check) ? 1 : -1]
+#endif
 
 
 // Basic types - PC
 #if defined(PLATFORM_PC)
+
     typedef   signed char           s8;
     typedef unsigned char           u8;
     typedef   signed short          s16;
@@ -71,31 +41,6 @@
     typedef float                   f32;
     typedef double                  f64;
 
-// Basic types - iphone/mac
-#elif (defined(PLATFORM_IOS) || defined(PLATFORM_MAC))
-    typedef   signed char           s8;
-    typedef unsigned char           u8;
-    typedef   signed short          s16;
-    typedef unsigned short          u16;
-    typedef   signed int            s32;
-    typedef unsigned int            u32;
-    typedef   signed long long      s64;
-    typedef unsigned long long      u64;
-    typedef float                   f32;
-    typedef double                  f64;
-
-// Basic types - android, linux
-#elif (defined(PLATFORM_ANDROID) || defined(PLATFORM_LINUX))
-    typedef   signed char           s8;
-    typedef unsigned char           u8;
-    typedef   signed short          s16;
-    typedef unsigned short          u16;
-    typedef   signed int            s32;
-    typedef unsigned int            u32;
-    typedef   signed long long      s64;
-    typedef unsigned long long      u64;
-    typedef float                   f32;
-    typedef double                  f64;
 
 #else
     #error Platform not defined
@@ -143,20 +88,14 @@ typedef struct QuadData
 }  QuadData;
 
 
-// Sanity checks
-//PRCOMPILER_ASSERT(sizeof(s8) == 1);
-//PRCOMPILER_ASSERT(sizeof(u8) == 1);
-//PRCOMPILER_ASSERT(sizeof(s16) == 2);
-//PRCOMPILER_ASSERT(sizeof(u16) == 2);
-//PRCOMPILER_ASSERT(sizeof(s32) == 4);
-//PRCOMPILER_ASSERT(sizeof(u32) == 4);
-//PRCOMPILER_ASSERT(sizeof(s64) == 8);
-//PRCOMPILER_ASSERT(sizeof(u64) == 8);
-//PRCOMPILER_ASSERT(sizeof(f32) == 4);
-//PRCOMPILER_ASSERT(sizeof(f64) == 8);
-
-
-//PRNAMESPACE_END
-//PRNAMESPACE_END // Namespaces
-
-#endif
+// Sanity check to ensure types are stated size in bytes
+PRCOMPILER_ASSERT(sizeof(s8) == 1);
+PRCOMPILER_ASSERT(sizeof(u8) == 1);
+PRCOMPILER_ASSERT(sizeof(s16) == 2);
+PRCOMPILER_ASSERT(sizeof(u16) == 2);
+PRCOMPILER_ASSERT(sizeof(s32) == 4);
+PRCOMPILER_ASSERT(sizeof(u32) == 4);
+PRCOMPILER_ASSERT(sizeof(s64) == 8);
+PRCOMPILER_ASSERT(sizeof(u64) == 8);
+PRCOMPILER_ASSERT(sizeof(f32) == 4);
+PRCOMPILER_ASSERT(sizeof(f64) == 8);
