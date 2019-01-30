@@ -12,78 +12,59 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ *  - Updated 2019 to remove unnecessary defines
  */
 
 
 #pragma once
 
 
-// Audio platform
-#define AUDIO_PC        1
-//#define AUDIO_IOS       2
-//#define AUDIO_ANDROID   3
-//#define AUDIO_MAC       4
-//#define AUDIO_LINUX     5
-
-
-// Determine platform. First check for PC
+// Determine platform. First check for windows
 #if defined(_MSC_VER)
     #define PLATFORM_PC
-    #define AUDIO_TYPE  AUDIO_PC
 
+// Else, Is it an apple device
+#elif defined(__APPLE_CC__)
+    #include "TargetConditionals.h"
+
+    // iOS Simulator
+    #if TARGET_IPHONE_SIMULATOR
+        #define PLATFORM_IOS
+        #define IOS_SIMULATOR
+    // iOS device
+    #elif TARGET_OS_IPHONE
+        #define PLATFORM_IOS
+    // Mac OS
+    #elif TARGET_OS_MAC
+        #define PLATFORM_MAC
+    #else
+        #error No platform has been defined!
+    #endif
+
+// Or Linux? Android?
+#elif defined(__GNUC__)
+    // Linux
+    #if ((defined(linux) || (__linux__)) && !defined(ANDROID))
+        #define PLATFORM_LINUX
+    // Android
+    #elif (ANDROID)
+        #define PLATFORM_ANDROID
+    #else
+        #error No platform has been defined!
+    #endif
 #else
     #error No platform has been defined!
-
 #endif
 
-//// Else, Is it the iphone? Mac?
-//#elif defined(__APPLE_CC__)
-//    #include "TargetConditionals.h"
-//
-//    // iOS Simulator
-//    #if TARGET_IPHONE_SIMULATOR
-//    #define PLATFORM_IOS
-//    #define IOS_SIMULATOR
-//    #define AUDIO_TYPE  AUDIO_IOS
-//
-//    // iOS device
-//    #elif TARGET_OS_IPHONE
-//        #define PLATFORM_IOS
-//        #define AUDIO_TYPE     AUDIO_IOS
-//
-//    // Mac OS
-//    #elif TARGET_OS_MAC
-//        #define PLATFORM_MAC
-//        #define AUDIO_TYPE     AUDIO_MAC
-//
-//    #else
-//        // Unsupported platform
-//        #error No platform has been defined!
-//
-//    #endif
-//
-//// Or Linux? Android?
-//#elif defined(__GNUC__)
-//    // Linux
-//    #if ((defined(linux) || (__linux__)) && !defined(ANDROID))
-//        #define PLATFORM_LINUX
-//        #define AUDIO_TYPE  AUDIO_LINUX
-//
-//    // Android
-//    #elif (ANDROID)
-//        #define PLATFORM_ANDROID
-//        #define AUDIO_TYPE  AUDIO_ANDROID
-//    #endif
-//
 
+// ----------------------------------------------------------------------------
+// Use these defines to configure the engine setup
+// ----------------------------------------------------------------------------
+#ifndef SOUND_ALLOW                                     // Use the sound system. Can be removed for debugging.
+#define SOUND_ALLOW
+#endif
 
-//// ----------------------------------------------------------------------------
-//// Use these defines to configure the engine setup
-//// ----------------------------------------------------------------------------
-//#ifndef SOUND_ALLOW                                     // Use the sound system. Can be removed for debugging.
-//#define SOUND_ALLOW
-//#endif
-//
 //#ifndef ALLOW_DIRECTX                                   // For builds that don't need DirectX
 ////#define ALLOW_DIRECTX
 //#endif
